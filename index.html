@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Book Store</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/icon.ico" type="image/gif" sizes="16x16">
+</head>
+
+<body onload="init()">
+    <div class="page-container">
+
+        <!-- Modal -->
+        <div class="modal-read-book hide">
+            <button class="close-read-modal btn-dark" onclick="onCloseReadModal()">x</button>
+            <div class="info-container">
+                <div class="book-info-img"></div>
+                <div class="book-info">
+                    <ul>
+                        <li class="title">title</li>
+                        <li class="author">author</li>
+                        <li class="price">price</li>
+                    </ul>
+                </div>
+                <div class="rating">
+                    <div class="rate-down disable" onclick="onChangeRate(-1)">-</div>
+                    <div class="curr-rate">rate</div>
+                    <div class="rate-up" onclick="onChangeRate(1)">+</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Header -->
+        <section class="header">
+            <header>
+                <div class="logo">
+                    <img src="img/logo.png" class="logo" />
+                </div>
+                <h1>
+                    My Book Store
+                </h1>
+                <div class="menu">
+                </div>
+                    <select class="sort-options" onchange="onSortChange(this.value)">
+                        <option>A-Z</option>
+                        <option>Z-A</option>
+                        <option>Price ↑</option>
+                        <option>Price ↓</option>
+                        <option>Rating ↑</option>
+                        <option>Rating ↓</option>
+                    </select>
+                <div class="add-new-book" onclick="onReadAndAddNewBook()">Add New Book +</div>
+            </header>
+        </section>
+
+        <!-- Main -->
+        <span class="page-number">Page 1</span>
+        <section class="books-container"></section>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous" onclick="onSetPrevPage()">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="onSetCurrentPage(1)">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="onSetCurrentPage(2)">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="onSetCurrentPage(3)">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next" onclick="onSetNextPage()">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Footer -->
+        <section class="footer">
+            <footer>
+                wallaYoffiRights &copy; 2019
+            </footer>
+        </section>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

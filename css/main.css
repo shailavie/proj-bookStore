@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.book-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 225px;
+    margin: 20px;
+    max-height: 500px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+} 
+
+.book-cover {
+    height: 220px;
+    max-width: 175px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+     margin: 0 10px 5px 5px;
+}
+
+header , footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header {
+    background-color: #563d7c;
+    color:white;
+    flex-grow: 1;
+    height: 70px;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 32px;
+    justify-content: left;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.menu {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.sort-options {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.add-new-book {
+    width: 190px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    padding: 10px 5px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.add-new-book:hover {
+    background-color:white;
+    color: #563d7c
+}
+
+.books-container {
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+}
+
+
+footer {
+    background-color: #0f1420;
+    color:white;
+    flex-grow: 1;
+    height: 70px;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 18px;
+    justify-content: center;
+    /* position: fixed; */
+    /* width: 100vh; */
+    bottom: 0;
+}
+
+p {
+    position: relative;
+    align-content: flex-end;
+}
+
+.modal-read-book {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: whitesmoke;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    min-width: 35%;
+    min-height: 35%;
+    overflow-y: hidden;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.close-read-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 10px;
+}
+
+.book-info-img {
+    width: 175px;
+}
+
+
+.book-info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    margin-left: -20px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 30px;
+    right: 66px;
+}
+
+.rate-down, .rate-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    columns: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.curr-rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    columns: gray;
+    z-index: 1;
+}
+
+
+.hide {
+    display: none;
+}
+
+.delete-btn {
+    float: right;
+    position: absolute;
+    right: 0px;
+    font-size: 20px;
+    font-weight: 300px;
+    padding: 5px;
+    background-color: rgb(218, 54, 54);
+    border-radius: 100px;
+    color:white;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.align-left {
+    text-align: left;
+}
+
+
+.cover-title {
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 150px;
+    font-stretch: expanded;
+    font-weight: 300px;
+    text-shadow: 2px 2px black;
+
+}
+
+.book-options {
+    font-size: 18px;
+    transform: rotate(90deg);
+    color: rgb(68, 68, 68);
+    float: right;
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.book-options:hover {
+    color: blue;
+}
+
+.options-modal {
+    position: absolute;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    top: 35px;
+    right: 10px;
+    width: 120px;
+    min-height: 50px;
+    background-color: whitesmoke;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+}
+
+.book-info > ul , .options-modal > ul {
+    list-style: none;
+    margin: 5px auto;
+}
+
+.options-modal > ul > li {
+    margin-left: -30px;
+}
+
+a {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+hr {
+    margin-left: -30px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-number {
+    margin: 5px;
+}
+
+.disable {
+    background-color: gray;
+    cursor: not-allowed;
+}
